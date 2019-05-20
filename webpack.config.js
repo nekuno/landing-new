@@ -47,6 +47,14 @@ module.exports = {
         ]
       },
       {
+        test: /\.css$/i,
+        use: [
+          assetFileLoader(),
+          'extract-loader',
+          { loader: 'css-loader', options: { sourceMap: true } },
+        ]
+      },
+      {
         test: /\.(png|jpg|svg|webp)$/i,
         use: [
           assetFileLoader(),
