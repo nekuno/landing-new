@@ -1,9 +1,9 @@
 const path = require('path');
-const webpack = require('webpack');
 
 const htmlLoader = {
   loader: 'html-loader',
   options: {
+    root: '.',
     attrs: [
       'link:href',
       'script:src',
@@ -18,6 +18,7 @@ const assetFileLoader = ext => ({
   loader: "file-loader",
   options: {
     name: '[path][name].' + (ext || "[ext]"),
+    length: 12,
   },
 });
 
