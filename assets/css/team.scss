@@ -26,10 +26,10 @@ body {
 					background-size: cover;
 					background-position-y: center;
 					&.first {
-						background-image: url("/assets/img/bg/zoe-lin-508640-unsplash-1000px.jpg");
+						background-image: url("../img/bg/zoe-lin-508640-unsplash-1000px.jpg");
 					}
 					&.second {
-						background-image: url("/assets/img/bg/nathan-dumlao-508970-unsplash-1000px.jpg");
+						background-image: url("../img/bg/nathan-dumlao-508970-unsplash-1000px.jpg");
 					}
 				}
 				.box {
@@ -53,6 +53,7 @@ body {
 			}
 		}
 		&.team {
+			padding-bottom: 110px;
 			.list {
 				display: flex;
                 flex-wrap: wrap;

@@ -36,6 +36,7 @@ async function main() {
 		console.log('Processing preloads on', page)
 		const html = await readFile(path.join(base, page), 'utf-8')
 		const header = extractPreloads(html)
+		if (!header) continue
 
 		let source = '/' + page
 		if (page === 'index.html') source = '/'
