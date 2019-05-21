@@ -33,21 +33,32 @@ body {
 		color: inherit;
 	}
 	.store-button {
-		width: 220px;
-		height: 54px;
-		border-radius: 27px;
+		padding: 6px 32px;
+		border-radius: 30px;
 		border: solid 1px $purple;
-		.logo {
-			width: 20px;
-			height: 24px;
+		font-size: 17px;
+		color: $dark-black;
+		fill: $dark-black;
+		margin: 0 20px;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		.text {
+			margin-left: 15px;
+		}
+
+		&.highlight {
+			color: $purple;
 			fill: $purple;
 		}
-		.text {
-			width: 116px;
-
-			font-size: 17px;
-			color: $purple;
-		}
+	}
+	.store-buttons {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
 	}
 	.first-box {
 		display: flex;
@@ -131,6 +142,9 @@ body {
 				.right {
 					right: 25.5px;
 				}
+			}
+			.store-buttons {
+				margin-top: 82px;
 			}
 			background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.04));
 			background-position: center bottom;
@@ -221,6 +235,9 @@ body {
 		}
 		&.hero {
 			padding-bottom: 160px;
+			.store-buttons {
+				margin-top: 60px;
+			}
 		}
 	}
 
