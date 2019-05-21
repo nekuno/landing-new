@@ -1,0 +1,94 @@
+@import "./base";
+
+body {
+	@extend %base;
+
+	.first-box {
+		.first-bg {
+			background-image: url("../img/bg/annie-spratt-608002-unsplash-1000px.jpg");
+		}
+	}
+	section {
+		&.connect {
+			padding-bottom: 440px;
+		}
+		&.boxes {
+			padding-top: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			.row {
+				flex: 0 0 500px;
+				display: flex;
+				align-items: stretch;
+				.img {
+					flex-basis: 50%;
+					background-size: cover;
+					background-position-y: center;
+					&.first {
+						background-image: url("/assets/img/bg/zoe-lin-508640-unsplash-1000px.jpg");
+					}
+					&.second {
+						background-image: url("/assets/img/bg/nathan-dumlao-508970-unsplash-1000px.jpg");
+					}
+				}
+				.box {
+					flex-basis: 50%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+
+					box-sizing: border-box;
+					padding: 0 80px;
+					.title,
+					.subtitle {
+						font-size: 20px;
+						margin-bottom: 0;
+					}
+					.subtitle {
+						margin-bottom: 32px;
+					}
+				}
+			}
+		}
+		&.team {
+			.list {
+				display: flex;
+                flex-wrap: wrap;
+                align-self: center;
+
+				box-sizing: border-box;
+                padding: 30px 40px;
+				.person-wrapper {
+					display: flex;
+					align-items: center;
+
+                    box-sizing: border-box;
+					padding: 20px;
+					.person {
+                        width: 300px;
+						height: 480px;
+
+						display: flex;
+						flex-direction: column;
+
+						border-radius: 10px;
+						box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+
+						color: $dark-black;
+                        text-align: center;
+						.name {
+							margin: 32px 20px auto;
+							font-size: 30px;
+						}
+						.role {
+							margin: 0 20px 32px;
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -23,7 +23,7 @@ const assetFileLoader = ext => ({
 });
 
 module.exports = {
-  entry: './index.html',
+  entry: ['./index.html', './team.html'],
   output: {
     filename: 'dummy.js',
     path: path.resolve(__dirname, 'dist'),
