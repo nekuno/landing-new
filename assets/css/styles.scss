@@ -68,7 +68,7 @@ body {
 				display: flex;
 				align-items: center;
 				a {
-					padding: 32px 16px;
+					padding: 32px 17px;
 
 					font-size: 18px;
 					color: $light-purple;
@@ -121,14 +121,27 @@ body {
 					right: 25.5px;
 				}
 			}
+			background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.04));
+			background-position: center bottom;
+			background-size: 100% 250px;
+			background-repeat: no-repeat;
 		}
-		&.influence {
+		&.partners {
+			padding: 34px 0;
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
+			align-items: center;
+			.partner {
+				margin: 0 40px;
+				opacity: .55;
+			}
 		}
 		&.plans {
-			background-image: linear-gradient(to bottom, #ffffff, #f6f6f6);
+			background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.04));
+			background-position: center top;
+			background-size: 100% 250px;
+			background-repeat: no-repeat;
 
 			.screens {
 				align-self: stretch;
@@ -203,5 +216,40 @@ body {
 		padding-top: 71px;
 		padding-bottom: 100px;
 		background-color: $dark-black;
+		color: white;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-end;
+		
+		.copyright {
+			font-size: 12px;
+			margin-top: 41px;
+		}
+		
+		.links {
+			margin-left: 23px;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+		}
+		
+		.links > div {
+			margin: 0 40px;
+		}
+		
+		h4 {
+			text-transform: uppercase;
+			margin-bottom: 24px;
+		}
+		
+		ul {
+			margin-bottom: -16px;
+		}
+		
+		li {
+			margin: 16px 0;
+		}
 	}
 }

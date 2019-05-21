@@ -6,7 +6,7 @@
 	<link
 	rel="shortcut icon"
 	type="image/x-icon"
-	href="assets/favicon.png"
+	href="/assets/favicon.png"
 	/>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	
@@ -14,13 +14,13 @@
 	rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Maven+Pro:500&display=swap"
 	/>
-	<link rel="stylesheet" href="assets/css/styles.scss" />
+	<link rel="stylesheet" href="/assets/css/styles.scss" />
 </head>
 <body>
 	<content>
 		<div class="first">
 			<header class="header">
-				<img src="assets/img/logo/full-foreground.svg" alt="Nekuno" />
+				<img src="/assets/img/logo/full-foreground.svg" alt="Nekuno" />
 				<nav class="navlist">
 					<a href="/">Nekuno</a>
 					<a href="/equipo.html">Equipo</a>
@@ -30,14 +30,14 @@
 			<section class="internet">
 				<h1 class="title">Un Internet para ti</h1>
 				<h3 class="subtitle">
-					Nekuno te acerca a lo que deseas, porque es capaz de
-					entenderte y de conocer el mundo a través de Internet
+					Nekuno te acerca a lo que deseas, porque es capaz de entenderte,
+					y de mostrarte una parte del mundo que todavía no imaginas
 				</h3>
 
 				<!-- <div class="store-button">
 					<object
 					type="image/svg+xml"
-					data="assets/img/store-android.svg"
+					data="/assets/img/store-android.svg"
 					class="logo"
 					>
 						Android
@@ -46,15 +46,26 @@
 				</div> -->
 					
 				<div class="screens">
-					<img src="assets/img/screens/main-splash.png" class="left" />
-					<img src="assets/img/screens/main-about.png" class="main" />
-					<img src="assets/img/screens/main-matches.png" class="right" />
+					<img src="/assets/img/screens/main-splash.png" class="left" />
+					<img src="/assets/img/screens/main-about.png" class="main" />
+					<img src="/assets/img/screens/main-matches.png" class="right" />
 				</div>
 			</section>
 		</div>
 			
-		<section class="influence">
-			<!-- TODO -->
+		<section class="partners">
+			<a href="https://impacthub.net" class="partner">
+				<img src="/assets/img/partner-hub.png" alt="Impact Hub" />
+			</a>
+			<a href="https://www.ull.es" class="partner">
+				<img src="/assets/img/partner-universidad-la-laguna.png" alt="Universidad de La Laguna" />
+			</a>
+			<a href="https://www.map-asociados.es" class="partner">
+				<img src="/assets/img/partner-map-asociados.png" alt="MAP &amp; ASOCIADOS" />
+			</a>
+			<a href="https://www.tetuanvalley.com" class="partner">
+				<img src="/assets/img/partner-tetuan.png" alt="Tetuan Valley" />
+			</a>
 		</section>
 		
 		<section class="plans">
@@ -64,11 +75,11 @@
 				sorprenda ;)
 			</h3>
 			<div class="screens">
-				<img src="assets/img/screens/plans-1.png" class="side" />
-				<img src="assets/img/screens/plans-2.png" class="center" />
-				<img src="assets/img/screens/plans-3.png" class="main" />
-				<img src="assets/img/screens/plans-4.png" class="center" />
-				<img src="assets/img/screens/plans-5.png" class="side" />
+				<img src="/assets/img/screens/plans-1.png" class="side" />
+				<img src="/assets/img/screens/plans-2.png" class="center" />
+				<img src="/assets/img/screens/plans-3.png" class="main" />
+				<img src="/assets/img/screens/plans-4.png" class="center" />
+				<img src="/assets/img/screens/plans-5.png" class="side" />
 			</div>
 		</section>
 		
@@ -81,7 +92,7 @@
 				Y Nekuno te ofrece la posibilidad de conocer a esas personas
 				mostrándote cómo de similar y compatible eres con ellas
 			</h3>
-			<img src="assets/img/compatibility-graph.png" alt="Graph" class="graph" />
+			<img src="/assets/img/compatibility-graph.path.svg" alt="Graph" class="graph" />
 		</section>
 		
 		<section class="privacy">
@@ -93,7 +104,7 @@
 			
 			<div class="images">
 				<div class="image">
-					<img src="assets/img/social-copy.svg" class="social" />
+					<img src="/assets/img/social-copy.svg" height="350" class="social" />
 					<h1 class="title">
 						Nekuno funciona gracias a las Redes Sociales que sincronizas
 					</h1>
@@ -103,7 +114,7 @@
 					</h3>
 				</div>
 				<div class="image">
-					<img src="assets/img/screens/data-settings.png" class="settings" />
+					<img src="/assets/img/screens/data-settings.png" height="350" class="settings" />
 					<h1 class="title">
 						Configura tu perfil para mostrar 
 						solo lo que quieres
@@ -121,35 +132,37 @@
 	</content>
 	
 	<footer>
-		<div class="block about">
-			<p>Logo</p>
+		<div class="about">
+			<img src="/assets/img/logo/full-background.svg" alt="Nekuno">
 			<p class="copyright">
 				&copy; 2019 Nekuno <br />
 				Todos los derechos reservados
 			</p>
 		</div>
-		<div class="block product">
-			<h4>Producto</h4>
-			<ul>
-				<li>Nekuno</li>
-				<li>Equipo</li>
-			</ul>
-		</div>
-		<div class="block support">
-			<h4>Soporte</h4>
-			<ul>
-				<li>Contacto</li>
-				<li>Términos de uso</li>
-				<li>Política de privacidad</li>
-			</ul>
-		</div>
-		<div class="block social">
-			<h4>Síguenos</h4>
-			<ul>
-				<li>Facebook</li>
-				<li>Twitter</li>
-				<li>Instagram</li>
-			</ul>
+		<div class="links">
+			<div class="product">
+				<h4>Producto</h4>
+				<ul>
+					<li><a href="/">Nekuno</a></li>
+					<li><a href="/equipo.html">Equipo</a></li>
+				</ul>
+			</div>
+			<div class="support">
+				<h4>Soporte</a></h4>
+				<ul>
+					<li><a href="/contacto.html">Contacto</a></li>
+					<li><a href="/terminos.html">Términos de uso</a></li>
+					<li><a href="/privacidad.html">Política de privacidad</a></li>
+				</ul>
+			</div>
+			<div class="social">
+				<h4>Síguenos</h4>
+				<ul>
+					<li><a href="https://www.facebook.com/nekuners">Facebook</a></li>
+					<li><a href="https://twitter.com/nekuners">Twitter</a></li>
+					<li><a href="https://www.instagram.com/nekuners/">Instagram</a></li>
+				</ul>
+			</div>
 		</div>
 	</footer>
 </body>
