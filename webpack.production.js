@@ -4,6 +4,7 @@ const htmlLoader = {
   loader: 'html-loader',
   options: {
     root: '.',
+    minimize: true,
     attrs: [
       'link:href',
       'script:src',
@@ -17,8 +18,8 @@ const htmlLoader = {
 const assetFileLoader = ext => ({
   loader: "file-loader",
   options: {
-    name: 'assets/[hash]' + (ext || "[ext]"),
-    length: 12,
+    name: 'assets/[hash:base58:7].' + (ext || "[ext]"),
+    publicPath: '/',
   },
 });
 
@@ -44,6 +45,7 @@ module.exports = {
           assetFileLoader('css'),
           'extract-loader',
           { loader: 'css-loader' },
+          'postcss-loader',
           { loader: 'sass-loader' },
         ]
       },
