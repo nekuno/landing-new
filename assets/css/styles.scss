@@ -1,5 +1,15 @@
 @import "../../vendor/meyer-reset/2.0/reset.min.css";
 
+@font-face {
+	font-family: 'Maven Pro';
+	font-style: normal;
+	font-weight: 500;
+	font-display: fallback;
+	src: local('Maven Pro Medium'), local('MavenPro-Medium'),
+		url('../fonts/maven-pro-v12-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		url('../fonts/maven-pro-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 $purple: #615acb;
 $dark-black: #2b3758;
 

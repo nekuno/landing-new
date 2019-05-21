@@ -48,7 +48,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|svg|webp)$/i,
+        test: /\.(png|jpg|svg|webp|woff2?|ttf|eot)$/i,
         use: [
           assetFileLoader(),
         ]
