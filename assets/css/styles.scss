@@ -39,25 +39,27 @@ body {
 			color: $purple;
 		}
 	}
-	.first {
+	.first-box {
 		display: flex;
 		flex-direction: column;
 		align-items: stretch;
-
-		&::after {
-			content: "";
-			background: url("/assets/img/bg/joshua-earle-233780-unsplash-1000px.jpg");
-			opacity: 0.5;
+		position: relative;
+		.first-bg {
 			top: 0;
 			left: 0;
 			bottom: 0;
 			right: 0;
 			position: absolute;
 			z-index: -1;
+
+			opacity: 0.3;
+			background-image: url("../img/bg/joshua-earle-233780-unsplash-1000px.jpg");
 			background-position-x: center;
 			background-position-y: bottom;
 			background-size: cover;
-			height: 873px;
+		}
+		.first-content {
+			z-index: 0;
 		}
 		.header {
 			display: flex;
