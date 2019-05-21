@@ -112,11 +112,22 @@
 		}
 
 		ul {
-			margin-bottom: -16px;
+			margin: -8px 0;
+			display: flex;
+			flex-direction: column;
+			li {
+				margin: 8px 0;
+			}
 		}
 
-		li {
-			margin: 16px 0;
+		.social a {
+			display: flex;
+			flex-direction: row;
+			align-items: middle;
+			justify-content: flex-start;
+			.icon {
+				margin: -3px 8px -3px 0;
+			}
 		}
 	}
 }
