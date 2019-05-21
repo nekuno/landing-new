@@ -29,6 +29,7 @@ module.exports = {
     './team.html',
     './privacy.html',
     './terms.html',
+    './404.html',
   ],
   output: {
     filename: 'dummy.js',
