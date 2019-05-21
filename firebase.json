@@ -2,7 +2,31 @@
   "hosting": {
     "public": "dist",
     "ignore": [
-      "dummy.js"
+      "/dummy.js"
+    ],
+    "cleanUrls": true,
+    "headers": [
+      {
+        "source": "/assets/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000"
+          }
+        ]
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/media/:path*",
+        "destination": "https://prev.nekuno.com/media/:path",
+        "type": 301
+      },
+      {
+        "source": "/uploads/:path*",
+        "destination": "https://prev.nekuno.com/uploads/:path",
+        "type": 301
+      }
     ]
   }
 }
