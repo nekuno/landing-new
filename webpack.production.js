@@ -1,9 +1,10 @@
 const path = require('path');
+const glob = require('glob');
 
 const htmlLoader = {
   loader: 'html-loader',
   options: {
-    root: '.',
+    root: __dirname,
     minimize: true,
     attrs: [
       'link:href',
@@ -15,6 +16,14 @@ const htmlLoader = {
   }
 };
 
+const htmlFileLoader = {
+  loader: "file-loader",
+  options: {
+    context: 'pages',
+    name: '[path][name].[ext]',
+  },
+};
+
 const assetFileLoader = ext => ({
   loader: "file-loader",
   options: {
@@ -24,13 +33,7 @@ const assetFileLoader = ext => ({
 });
 
 module.exports = {
-  entry: [
-    './index.html',
-    './team.html',
-    './privacy.html',
-    './terms.html',
-    './404.html',
-  ],
+  entry: glob.sync('./pages/**.html'),
   output: {
     filename: 'dummy.js',
     path: path.resolve(__dirname, 'dist'),
@@ -40,7 +43,7 @@ module.exports = {
       {
         test: /\.html$/i,
         use: [
-          { loader: "file-loader", options: { name: '[path][name].[ext]' } },
+          htmlFileLoader,
           "extract-loader",
           htmlLoader,
         ]
