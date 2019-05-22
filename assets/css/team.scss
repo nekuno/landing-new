@@ -22,10 +22,21 @@ body {
 				flex: 0 0 500px;
 				display: flex;
 				align-items: stretch;
+				@media screen and (max-width: $break-phone) {
+					flex-direction: column;
+					align-items: center;
+					&:nth-child(2) {
+						flex-direction: column-reverse;
+					}
+				}
 				.img {
 					flex-basis: 50%;
 					background-size: cover;
 					background-position-y: center;
+					@media screen and (max-width: $break-phone) {
+						flex-basis: 500px;
+						width: 100%;
+					}
 					&.first {
 						background-image: url("../img/bg/zoe-lin-508640-unsplash-1000px.jpg");
 					}
@@ -41,7 +52,10 @@ body {
 					justify-content: center;
 
 					box-sizing: border-box;
-					padding: 0 80px;
+					padding: 0 30px;
+					@media screen and (max-width: $break-phone) {
+						flex-basis: 500px;
+					}
 					.title,
 					.subtitle {
 						font-size: 20px;
@@ -55,22 +69,32 @@ body {
 		}
 		&.team {
 			padding-bottom: 110px;
+			@media screen and (max-width: $break-phone) {
+				padding-top: 0;
+			}
 			.list {
 				display: flex;
-                flex-wrap: wrap;
+				flex-wrap: wrap;
 				align-self: center;
 				align-items: center;
 
 				box-sizing: border-box;
-                padding: 30px 40px;
+				margin: 30px 40px;
+				max-width: 1000px;
+				@media screen and (max-width: $break-tablet) {
+					max-width: 500px;
+				}
+				@media screen and (max-width: $break-phone) {
+					max-width: 250px;
+				}
 				.person-wrapper {
 					display: flex;
 					align-items: center;
 
-                    box-sizing: border-box;
+					box-sizing: border-box;
 					padding: 20px;
 					.person {
-                        width: 210px;
+						width: 210px;
 						height: 336px;
 
 						display: flex;
