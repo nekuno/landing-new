@@ -8,7 +8,7 @@
     "build": "webpack",
     "start:dev": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "npm run clean && webpack --mode=production --config webpack.production.js && node tools/extract-preloads && firebase deploy"
+    "deploy": "npm run clean && NODE_ENV=production webpack && node tools/extract-preloads && firebase deploy"
   },
   "repository": {
     "type": "git",
