@@ -21,7 +21,11 @@ const htmlFileLoader = {
   loader: "file-loader",
   options: {
     context: 'pages',
-    name: '[path][name].[ext]',
+    name: file => {
+      const { name } = path.parse(file)
+      return (name === 'index' || name === '404') ?
+        '[path][name].html' : '[path][name]/index.html';
+    }
   },
 };
 

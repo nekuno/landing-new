@@ -4,7 +4,6 @@
     "ignore": [
       "/dummy.js"
     ],
-    "cleanUrls": true,
     "headers": [
       {
         "source": "/assets/**",
