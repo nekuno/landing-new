@@ -47,14 +47,28 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 60px 100px;
+
+		@media screen and (max-width: $break-phone) {
+			flex-direction: column;
+			align-items: center;
+			padding: 40px 100px;
+		}
 		.navlist {
 			display: flex;
 			align-items: center;
+			@media screen and (max-width: $break-phone) {
+				flex-direction: column;
+				margin-top: 30px;
+			}
 			a {
 				padding: 32px 17px;
 
 				font-size: 18px;
 				color: $purple;
+
+				@media screen and (max-width: $break-phone) {
+					padding: 20px 17px;
+				}
 			}
 		}
 	}
@@ -64,10 +78,13 @@
 		align-items: center;
 
 		padding-top: 160px;
+		@media screen and (max-width: $break-tablet) {
+			padding-top: 80px;
+		}
 		.title {
 			font-size: 34px;
 			color: $purple;
-			margin-bottom: 32px;
+			margin: 0 32px 32px;
 			text-align: center;
 		}
 		.subtitle {
@@ -76,6 +93,7 @@
 			text-align: center;
 			font-size: 20px;
 			color: $dark-black;
+			margin: 0 32px;
 		}
 	}
 	article section {
@@ -87,12 +105,16 @@
 		text-align: left;
 		display: block;
 
-		h1, h2, h3, h4 {
+		h1,
+		h2,
+		h3,
+		h4 {
 			color: $purple;
 			margin: 1.3em 0.5em 0.6em;
 			text-align: center;
 		}
-		h1, h2 {
+		h1,
+		h2 {
 			font-size: 34px;
 		}
 		h3 {
@@ -104,16 +126,17 @@
 		ol {
 			list-style-type: decimal;
 		}
-		ul, ol {
+		ul,
+		ol {
 			margin-left: 2em;
 		}
-		p, li {
+		p,
+		li {
 			margin-top: 0.9em;
 		}
 	}
 	footer {
-		padding-top: 71px;
-		padding-bottom: 100px;
+		padding: 70px 40px 100px;
 		background-color: $dark-black;
 		color: white;
 		font-size: 14px;
@@ -123,9 +146,17 @@
 		justify-content: center;
 		align-items: flex-end;
 
+		@media screen and (max-width: $break-phone) {
+			flex-direction: column;
+			align-items: center;
+			padding-bottom: 70px;
+		}
 		.copyright {
 			font-size: 12px;
-			margin-top: 41px;
+			margin-top: 40px;
+			@media screen and (max-width: $break-phone) {
+				margin-top: 30px;
+			}
 		}
 
 		.links {
@@ -133,10 +164,19 @@
 			display: flex;
 			flex-direction: row;
 			align-items: flex-start;
+			@media screen and (max-width: $break-phone) {
+				flex-direction: column;
+				align-items: center;
+				margin: 25px 0
+			}
 		}
 
 		.links > div {
 			margin: 0 40px;
+			@media screen and (max-width: $break-phone) {
+				margin: 20px 0;
+				text-align: center;
+			}
 		}
 
 		h4 {
