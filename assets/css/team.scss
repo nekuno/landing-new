@@ -6,6 +6,7 @@ body {
 	.first-box {
 		.first-bg {
 			background-image: url("../img/bg/annie-spratt-608002-unsplash-1000px.jpg");
+			opacity: 0.15;
 		}
 	}
 	section {
@@ -57,7 +58,8 @@ body {
 			.list {
 				display: flex;
                 flex-wrap: wrap;
-                align-self: center;
+				align-self: center;
+				align-items: center;
 
 				box-sizing: border-box;
                 padding: 30px 40px;
@@ -68,8 +70,8 @@ body {
                     box-sizing: border-box;
 					padding: 20px;
 					.person {
-                        width: 300px;
-						height: 480px;
+                        width: 210px;
+						height: 336px;
 
 						display: flex;
 						flex-direction: column;
@@ -78,14 +80,17 @@ body {
 						box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
 
 						color: $dark-black;
-                        text-align: center;
+						text-align: center;
+						img {
+							width: 100%;
+						}
 						.name {
-							margin: 32px 20px auto;
-							font-size: 30px;
+							margin: 22px 14px auto;
+							font-size: 22px;
 						}
 						.role {
-							margin: 0 20px 32px;
-							font-size: 20px;
+							margin: 0 14px 22px;
+							font-size: 15px;
 						}
 					}
 				}
