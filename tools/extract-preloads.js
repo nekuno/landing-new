@@ -9,8 +9,11 @@ const cheerio = require('cheerio')
 function extractPreloads(html) {
 	const $ = cheerio.load(html)
 	const links = Array.from($('link[rel="preload"]'))
-	return links.map(el =>
-		`<${el.attribs.href}>;rel=preload;as=${el.attribs.as}`).join(',')
+	return links.map(el => {
+		const { href, ...other } = el.attribs
+		return `<${href}>;` + Object.keys(other).map(k =>
+			other[k] ? `${k}=${other[k]}` : k).join(';')
+	}).join(',')
 }
 
 function getHeadersFor(firebase, source) {
@@ -38,8 +41,9 @@ async function main() {
 		const header = extractPreloads(html)
 		if (!header) continue
 
-		let source = '/' + page
-		if (page === 'index.html') source = '/'
+		let source = path.join('/', page)
+		if (path.basename(source) === 'index.html')
+			source = path.dirname(source)
 		const block = getHeadersFor(firebase, source)
 		block.headers = block.headers.filter(x => x.key !== 'Link')
 		block.headers.push({ key: 'Link', value: header })
