@@ -8,8 +8,8 @@ body {
 		border-radius: 30px;
 		border: solid 1px $purple;
 		font-size: 17px;
-		color: $dark-black;
-		fill: $dark-black;
+		color: $purple;
+		fill: $purple;
 		margin: 0 20px;
 
 		display: flex;
@@ -18,11 +18,6 @@ body {
 
 		.text {
 			margin-left: 15px;
-		}
-
-		&.highlight {
-			color: $purple;
-			fill: $purple;
 		}
 	}
 	.store-buttons {
@@ -34,6 +29,7 @@ body {
 	.first-box {
 		.first-bg {
 			background-image: url("../img/bg/joshua-earle-233780-unsplash-1000px.jpg");
+			opacity: 0.6;
 		}
 	}
 	section {
@@ -134,7 +130,7 @@ body {
 				align-self: stretch;
 
 				display: flex;
-				justify-content: space-around;
+				justify-content: space-evenly;
 				.image {
 					display: flex;
 					flex-direction: column;
