@@ -12,6 +12,10 @@ body {
 	section {
 		&.connect {
 			padding-bottom: 440px;
+			@media screen and (max-width: $break-phone) {
+				padding-top: 45px;
+				padding-bottom: 120px;
+			}
 		}
 		&.boxes {
 			padding-top: 0;
@@ -76,7 +80,7 @@ body {
 				display: flex;
 				flex-wrap: wrap;
 				align-self: center;
-				align-items: center;
+				justify-content: center; // temporal
 
 				box-sizing: border-box;
 				margin: 30px 40px;
