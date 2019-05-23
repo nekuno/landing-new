@@ -10,6 +10,7 @@ body {
 		font-size: 17px;
 		color: $purple;
 		margin: 0 20px;
+		background-color: white;
 
 		display: flex;
 		flex-direction: row;
@@ -148,11 +149,9 @@ body {
 		&.matching {
 			.graph {
 				width: 1032px;
-				height: 468px;
+				max-width: 85%;
 				margin-top: 160px;
 				@media screen and (max-width: $break-tablet) {
-					width: 90%;
-					height: auto;
 					margin-top: 80px;
 				}
 				@media screen and (max-width: $break-phone) {
