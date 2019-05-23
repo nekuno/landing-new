@@ -32,11 +32,11 @@ async function main() {
 	const firebaseFile = __dirname + '/../firebase.json';
 	let firebaseJson = await readFile(firebaseFile, 'utf-8')
 	const firebase = JSON.parse(firebaseJson)
+	let apacheConf = ''
 
 	const base = __dirname + "/../dist"
 	const pages = await glob('**/*.html', { cwd: base })
 	for (const page of pages) {
-		console.log('Processing preloads on', page)
 		const html = await readFile(path.join(base, page), 'utf-8')
 		const header = extractPreloads(html)
 		if (!header) continue
@@ -44,6 +44,12 @@ async function main() {
 		let source = path.join('/', page)
 		if (path.basename(source) === 'index.html')
 			source = path.dirname(source)
+		console.log(`Extracting preloads on ${source}`)
+
+		apacheConf += `<LocationMatch ${JSON.stringify('^/' + page + '$')}>\n` // FIXME: full-blown escape
+		apacheConf += `\tHeader add Link ${JSON.stringify(header)}\n`
+		apacheConf += `</LocationMatch>\n`
+
 		const block = getHeadersFor(firebase, source)
 		block.headers = block.headers.filter(x => x.key !== 'Link')
 		block.headers.push({ key: 'Link', value: header })
@@ -51,6 +57,7 @@ async function main() {
 
 	firebaseJson = JSON.stringify(firebase, null, 2) + '\n'
 	await writeFile(firebaseFile, firebaseJson, 'utf-8')
+	await writeFile(__dirname + '/../preloads.conf', apacheConf, 'utf-8')
 }
 
 main().catch(err => {
