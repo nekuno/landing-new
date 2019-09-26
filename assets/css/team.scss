@@ -5,14 +5,29 @@ body {
 
 	.first-box {
 		.first-bg {
-			background-image: url("../img/bg/annie-spratt-608002-unsplash-1000px.jpg");
+			background-image: url("../img/bg/bg-team-box-1000px.jpg");
 			opacity: 0.15;
+		}
+		.hero-video {
+			margin-top: 4em;
+			max-width: 890px;
+			width: 100%;
+
+			.hero-video-wrap {
+				padding-bottom: 9/16 * 100%;
+				position: relative;
+				iframe {
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+			}
 		}
 	}
 	section {
 		&.connect {
-			padding-bottom: 440px;
-			@media screen and (max-width: $break-phone) {
+			padding-bottom: 200px;
+			@media screen and (max-width: $break-tablet) {
 				padding-top: 45px;
 				padding-bottom: 120px;
 			}
@@ -26,7 +41,7 @@ body {
 				flex: 0 0 500px;
 				display: flex;
 				align-items: stretch;
-				@media screen and (max-width: $break-phone) {
+				@media screen and (max-width: $break-tablet) {
 					flex-direction: column;
 					align-items: center;
 					&:nth-child(2) {
@@ -36,16 +51,16 @@ body {
 				.img {
 					flex-basis: 50%;
 					background-size: cover;
-					background-position-y: center;
-					@media screen and (max-width: $break-phone) {
+					background-position: center;
+					@media screen and (max-width: $break-tablet) {
 						flex-basis: 500px;
 						width: 100%;
 					}
 					&.first {
-						background-image: url("../img/bg/zoe-lin-508640-unsplash-1000px.jpg");
+						background-image: url("../img/bg/bg-team-first-1000px.jpg");
 					}
 					&.second {
-						background-image: url("../img/bg/nathan-dumlao-508970-unsplash-1000px.jpg");
+						background-image: url("../img/bg/bg-team-second-1000px.jpg");
 					}
 				}
 				.box {
@@ -57,7 +72,7 @@ body {
 
 					box-sizing: border-box;
 					padding: 0 30px;
-					@media screen and (max-width: $break-phone) {
+					@media screen and (max-width: $break-tablet) {
 						flex-basis: 500px;
 					}
 					.title,
@@ -65,7 +80,7 @@ body {
 						font-size: 20px;
 						margin-bottom: 0;
 					}
-					.subtitle {
+					.title {
 						margin-bottom: 32px;
 					}
 				}
@@ -104,13 +119,15 @@ body {
 						display: flex;
 						flex-direction: column;
 
-						border-radius: 10px;
+						$radius: 10px;
+						border-radius: $radius;
 						box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
 
 						color: $dark-black;
 						text-align: center;
 						img {
 							width: 100%;
+							border-radius: $radius $radius 0 0;
 						}
 						.name {
 							margin: 22px 14px auto;
