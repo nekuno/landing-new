@@ -32,7 +32,7 @@ const htmlFileLoader = {
 const assetFileLoader = ext => ({
   loader: "file-loader",
   options: {
-    name: (isDev ? '[path][name].' : 'assets/[hash:base58:7].') + (ext || "[ext]"),
+    name: (isDev ? '[path][name].' : 'res/[hash:base58:7].') + (ext || "[ext]"),
     publicPath: '/',
   },
 });
