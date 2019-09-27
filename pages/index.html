@@ -195,6 +195,12 @@
 	</footer>
 
 	<script>
+		[].slice.call(document.querySelectorAll('.subscribe-button')).forEach(function (el) {
+			el.addEventListener('click', function (e) {
+				// TODO
+				e.preventDefault();
+			})
+		})
 		(function(b, o, i, l, e, r) {
 			b.GoogleAnalyticsObject = l;
 			b[l] || (b[l] =
