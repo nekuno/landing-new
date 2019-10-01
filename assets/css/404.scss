@@ -1,0 +1,23 @@
+@import "./base";
+
+body {
+	@extend %base;
+
+	.first-box {
+		.first-bg {
+			background-image: url("../img/bg/bg-404-1000px.jpg");
+			background-position-y: 0%;
+			opacity: 0.6;
+		}
+	}
+
+	.content {
+		color: white;
+		text-align: center;
+		font-size: 1.7em;
+		padding: 40px 0 240px;
+		.title {
+			font-size: 6em;
+		}
+	}
+}
