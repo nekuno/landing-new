@@ -61,13 +61,16 @@
 		@media screen and (max-width: $break-phone) {
 			flex-direction: column;
 			align-items: center;
-			padding: 40px 100px;
+			padding: 0 0 40px;
 		}
 		.navlist {
 			display: flex;
 			align-items: center;
+			text-align: center;
 			@media screen and (max-width: $break-phone) {
-				display: none;
+				order: -1;
+				align-self: stretch;
+				margin-bottom: 40px;
 			}
 			a {
 				padding: 32px 17px;
@@ -76,7 +79,14 @@
 				color: $purple;
 
 				@media screen and (max-width: $break-phone) {
-					padding: 20px 17px;
+					padding: 14px 16px;
+					flex-grow: 1;
+					background-color: #615acb;
+					color: #f2f2f2;
+					&.active, &:hover, &:active {
+						background-color: transparent;
+						color: #615acb;
+					}
 				}
 			}
 		}
